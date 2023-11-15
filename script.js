@@ -62,7 +62,6 @@ function outWithTheOldInWithTheNew() {
   createButton(container2, "rgb(0,0,0)", "FNF", "https://static.playunblocked.com/2021/04/friday-night-funkin/");
   createButton(container2, "rgb(0,0,0)", "Chess", "https://toytheater.com/chess.php");
   createButton(container2, "rgb(0,0,0)", "Checkers", "https://toytheater.com/checkers.php");
-  createButton(container2, "rgb(0,0,0)", "Run 3", "https://unblocked1889.github.io/R033/tn6pS9dCf37xAhkJv/");
   
   createButton(container3, "rgb(0,0,0)", "Subway Surfers", "https://superteamxx.github.io/Subway-Surfers/");
   createButton(container3, "rgb(0,0,0)", "GD Scratch", "https://turbowarp.org/105500895/embed");
@@ -124,6 +123,8 @@ function outWithTheOldInWithTheNew() {
   createButton(container13, "rgb(0,0,0)", "GBA games", "https://bobzgames.github.io/GBA/");
   createButton(container13, "rgb(0,0,0)", "Mario 64", "https://sm64webbackup--collintyes.repl.co/");
   createButton(container13, "rgb(0,0,0)", "Minecraft (kinda)", "https://ubg100.github.io/games/eaglercraft/index.html");
+
+  createButton(container14, "rgb(0,0,0)", "SZ Games", "https://sz-games.github.io/");
   function createButton(parent, backgroundColor, text, url) {
     var button = document.createElement("button");
     button.classList.add("button");
