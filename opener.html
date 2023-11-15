@@ -1,4 +1,8 @@
 <script>
+  function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
   var win = window.open("about:blank", "", "width=1,height=1");
   win.resizeTo(screen.width * 0.9, screen.height * 0.9);
   win.location.origin = 'about:blank';
@@ -11,6 +15,6 @@
       </body>
     </html>`
   );
-
+  sleep(2000)
   close();
 </script>
