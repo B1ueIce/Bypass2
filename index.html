@@ -6,31 +6,56 @@
     <title>Blue's Bypass 2.0</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
         body {
-            background-color: #f0f8ff; /* very light blue */
-            color: #000; /* black text */
-            font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
+            font-family: 'Comfortaa', sans-serif; /* Change to Comfortaa font */
+            height: 300vh;
+            background: linear-gradient(to bottom, #fff, #00f);
+        }
+        .header {
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            color: #00f;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
         }
         h1 {
-            font-size: 3em;
+            
+            font-size: 4em;
             margin-bottom: 10px;
         }
         h2 {
             font-size: 2em;
             margin-top: 0;
         }
+        h3 {
+            font-size: 1em;
+            margin-top: 5;
+          
+        }
+        h3 {
+            font-size: 1em;
+            margin-top: 15;
+          
+        }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Blue's</h1>
-        <h2>Bypass Website 2.0</h2>
+    <div class="header">
+        <div class="content">
+            <h1>Blue</h1>
+            <h2>Bypass Website 2.0</h2>
+            <h3>↓ Drag this to your bookmarks to use ↓</h3>
+            <h3><a href="opener.html" target="_blank">Tab Version</a></h3>
+            <h4><a href="javascript: var win=window.open('https://google.com','_blank','popup=yes'); win.location.origin = 'https://google.com'; win.document.write('<!DOCTYPE html><html><head></head><body style=\'margin:0;\'><iframe src=\'${atob('aHR0cHM6Ly9jbG9ja3dvcmstb3MudmVyY2VsLmFwcC9vcy8=')}\' style=\'width:100%;height:100vh;border:none;\'></iframe></body></html>');">Bookmarklet Version</a></h4>
+
+        </div>
     </div>
 </body>
 </html>
