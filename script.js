@@ -10,9 +10,9 @@ function clear() {
   }
 }
 
-function outWithTheOldInWithTheNew() {
+function change() {
   document.title = "Blues Bypass";
-
+  clear();
   var link = document.createElement('link');
   link.rel = 'icon';
   link.type = 'image/x-icon';
@@ -185,8 +185,8 @@ function outWithTheOldInWithTheNew() {
     button.id = "buttonback";
     button.textContent = "X"
     button.onclick = function () {
-      clear();
-      outWithTheOldInWithTheNew();
+      
+      change();
       
     };
   
