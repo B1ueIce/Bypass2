@@ -1,20 +1,24 @@
-<script>
-  function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+<!DOCTYPE html>
+<html>
+  <script>
+    function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+    var win = window.open("about:blank", "", "width=1,height=1");
+    win.resizeTo(screen.width * 0.9, screen.height * 0.9);
+    win.location.origin = 'about:blank';
+    win.document.write(`
+      <!DOCTYPE html>
+      <html>
+        <head></head>
+        <body style="margin: 0;">
+          <iframe src="https://b1ueice.github.io/Bypass2/main" style="width: 100%; height: 100vh; border: none;"></iframe>
+        </body>
+      </html>`
+    );
+    sleep(2000)
+    close();
+  </script>
+</html>
 
-  var win = window.open("about:blank", "", "width=1,height=1");
-  win.resizeTo(screen.width * 0.9, screen.height * 0.9);
-  win.location.origin = 'about:blank';
-  win.document.write(`
-    <!DOCTYPE html>
-    <html>
-      <head></head>
-      <body style="margin: 0;">
-        <iframe src="https://b1ueice.github.io/Bypass2/main" style="width: 100%; height: 100vh; border: none;"></iframe>
-      </body>
-    </html>`
-  );
-  sleep(2000)
-  close();
-</script>
