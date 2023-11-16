@@ -87,7 +87,6 @@ function change() {
   createButton(container6, "rgb(0,0,0)", "Crossy Road", "https://sz-games.github.io/cr/");
   createButton(container6, "rgb(0,0,0)", "Fluids", "https://sz-games.github.io/storage3/1/");
   createButton(container6, "rgb(0,0,0)", "Temple Run 2", "https://mr-funkinguy.github.io/Abc6782/games/temple-run-2/index.html");
-  createButton(container6, "rgb(0,0,0)", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");
   
   createButton(container7, "rgb(0,0,0)", "Doodle Jump", "https://mr-funkinguy.github.io/gfile/doodle/index.html");
   createButton(container7, "rgb(0,0,0)", "Paper.io 2", "https://script.google.com/macros/s/AKfycbxO8jKpDOwFYpSGrGbReR4Mv2e1-6T4uHsWBphygjzyG8Qqpvij/exec");
@@ -102,7 +101,8 @@ function change() {
   createButton(container9, "rgb(0,0,0)", "The Impossible Quiz", "https://cdn2.addictinggames.com/addictinggames-content/ag-assets/content-items/html5-games/theimpossiblequiz/index.html");
   createButton(container9, "rgb(0,0,0)", "Stupid Clicker", "https://turbowarp.org/774324107/embed");
   createButton(container9, "rgb(0,0,0)", "Lil Oasis", "https://turbowarp.org/859599778/embed");
-  createButton(container9, "rgb(0,0,0)", "Lil Oasis Expanded", "https://turbowarp.org/860600597/embed");
+  createButton(container9, "rgb(0,0,0)", "Lil Oasis Expanded", "https://turbowarp.org/860600597/embed")
+  createButton(container9, "rgb(0,0,0)", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");;
 
   createButton(container10,"rgb(0,0,0)", "Are you kidding me?", "https://turbowarp.org/836226987/embed");
   createButton(container10, "rgb(0,0,0)", "AYKM Hard Mode", "https://turbowarp.org/846897438/embed");
