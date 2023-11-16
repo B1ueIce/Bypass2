@@ -4,7 +4,7 @@ function clear() {
   var childNodes = body.childNodes;
   for (var i = childNodes.length - 1; i >= 0; i--) {
     var node = childNodes[i];
-    if (node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE") {
+    if (node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE" && node.name !== "BROWSER") {
       body.removeChild(node);
     }
   }
@@ -54,15 +54,27 @@ function change() {
     return container;
   }
 
-  function createFrame(top,src) {
-    var container = document.createElement("iframe");
-    container.src = src
-    container.style.top = top;
-    container.classList.add("iframe")
-    document.body.appendChild(container);
-    return container;
+  function createFrame(top, src) {
+    var existingFrame = document.querySelector('iframe[name="BROWSER"]');
+    
+    // Check if the iframe with name "BROWSER" exists
+    if (!existingFrame) {
+      var container = document.createElement("iframe");
+      container.src = src;
+      container.style.top = top;
+      container.classList.add("iframe");
+      container.name = "BROWSER";
+      document.body.appendChild(container);
+      return container;
+    } else {
+      console.log("Iframe already exists. Not creating a new one.");
+      return existingFrame;
+    }
   }
-  createFrame(15 * (20 - 1) + '%',"https://browser.rammerhead.org/")
+  
+  // Call the function
+  var browserFrame = createFrame(15 * (20 - 1)-10 + '%', "https://browser.rammerhead.org/");
+  
 
   //createButton(container1, "rgb(0,0,0)", "Browser", "https://cloudflare.rammerhead.org");
   createButton(container1, "rgb(0,0,0)", "Clockwork", "https://clockwork-os.vercel.app/os/");
@@ -154,7 +166,7 @@ function change() {
     };
   
     var bgColor = backgroundColor.toLowerCase();
-    var textColor = getContrastingColor(bgColor);
+    var textColor = "#ffffff"
     button.style.color = textColor;
   
     var observer = new ResizeObserver(function (entries) {
@@ -182,19 +194,16 @@ function change() {
   
 
 
-  function getContrastingColor(backgroundColor) {
-    var r = parseInt(backgroundColor.substr(1, 2), 16);
-    var g = parseInt(backgroundColor.substr(3, 2), 16);
-    var b = parseInt(backgroundColor.substr(5, 2), 16);
-    var yiq = (r * 299 + g * 587 + b * 114) / 1000;
-    return yiq >= 128 ? "#000000" : "#ffffff";
-  }
+
   
   function open(url) {
     var iframe = document.createElement("iframe");
     iframe.src = url;
     iframe.classList.add("emulation-container")
     document.body.appendChild(iframe);
+    browserFrame.style.height = "0%"
+    browserFrame.style.width = "0%"
+    
   
     var button = document.createElement("button");
     button.id = "buttonback";
@@ -202,6 +211,8 @@ function change() {
     button.onclick = function () {
       
       change();
+      browserFrame.style.height = "100%"
+      browserFrame.style.width = "100%"
       
     };
   
