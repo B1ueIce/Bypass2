@@ -73,7 +73,7 @@ function change() {
   }
   
   // Call the function
-  var browserFrame = createFrame(15 * (20 - 1)-10 + '%', "https://browser.rammerhead.org/");
+  var browserFrame = createFrame(15 * (20 - 1)+ 7 + '%', "https://browser.rammerhead.org/");
   
 
   //createButton(container1, "rgb(0,0,0)", "Browser", "https://cloudflare.rammerhead.org");
@@ -144,15 +144,23 @@ function change() {
 
   createButton(container12, "rgb(0,0,0)", "Little Alchemy", "https://littlealchemy.com");
   createButton(container12, "rgb(0,0,0)", "Little Alchemy 2", "https://littlealchemy2.com");
-  createButton(container12, "rgb(0,0,0)","2048", "https://play2048.co");
 
   createButton(container13, "rgb(0,0,0)", "Spotify", "https://open.spotify.com/");
   createButton(container13, "rgb(0,0,0)", "GBA games", "https://bobzgames.github.io/GBA/");
   createButton(container13, "rgb(0,0,0)", "Mario 64", "https://sm64webbackup--collintyes.repl.co/");
   createButton(container13, "rgb(0,0,0)", "Minecraft (kinda)", "https://ubg100.github.io/games/eaglercraft/index.html");
+  createButton(container13, "rgb(0,0,0)", "Tunnel Rush", "https://tunnelrush.github.io/games/tunnel-rush/index.html");
 
   createButton(container14, "rgb(0,0,0)", "SZ Games", "https://sz-games.github.io/");
 
+  createButton(container15, "rgb(0,0,0)","2048", "https://play2048.co");
+  createButton(container15, "rgb(0,0,0)","9007199254740992", "https://dmitrykuzmenko.github.io/2048/");
+  createButton(container15, "rgb(0,0,0)","11", "http://suki.ipb.ac.rs/11/");
+  createButton(container15, "rgb(0,0,0)","590295810358705700000", "https://thereal23.github.io/590295810358705700000/");
+
+  createButton(container16, "rgb(0,0,0)", "Slope", "https://slope2.online/1.embed");
+  createButton(container16, "rgb(0,0,0)", "Slope 2", "https://slope2.online/2.embed");
+  createButton(container16, "rgb(0,0,0)", "Pinball", "https://sz-games.github.io/Games6/space-cadet-pinball/");
 
 
   function createButton(parent, backgroundColor, text, url) {
