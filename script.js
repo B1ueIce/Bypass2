@@ -61,8 +61,8 @@ function change() {
   createButton(container2, "rgb(0,0,0)", "Clicker Heroes", "https://games-online.io/game/ClickerHeroes/");
   createButton(container2, "rgb(0,0,0)", "FNF", "https://static.playunblocked.com/2021/04/friday-night-funkin/");
   createButton(container2, "rgb(0,0,0)", "Chess", "https://toytheater.com/chess.php");
-  createButton(container2, "rgb(0,0,0)", "Checkers", "https://toytheater.com/checkers.php");
-  createButton(container2, "rgb(0,0,0)", "diep.io", "https://diep.io/");
+
+  //createButton(container2, "rgb(0,0,0)", "diep.io", "https://diep.io/");
   
   createButton(container3, "rgb(0,0,0)", "Subway Surfers", "https://superteamxx.github.io/Subway-Surfers/");
   createButton(container3, "rgb(0,0,0)", "GD Scratch", "https://turbowarp.org/105500895/embed");
@@ -82,6 +82,7 @@ function change() {
   createButton(container5, "rgb(0,0,0)", "Smash Karts", "https://mr-funkinguy.github.io/75/projects/smashkarts/index.html");
   createButton(container5, "rgb(0,0,0)", "Agar.io", "https://emupedia.net/emupedia-game-agar.io/");
   createButton(container5, "rgb(0,0,0)", "Stack", "https://sz-games.github.io/games/stack");
+  createButton(container5, "rgb(0,0,0)", "Checkers", "https://toytheater.com/checkers.php");
   
   createButton(container6, "rgb(0,0,0)", "Crossy Road", "https://sz-games.github.io/cr/");
   createButton(container6, "rgb(0,0,0)", "Fluids", "https://sz-games.github.io/storage3/1/");
