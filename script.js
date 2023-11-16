@@ -138,7 +138,7 @@ function change() {
   createButton(container10, "rgb(0,0,0)", "AYKM Dark Mode", "https://turbowarp.org/863602237/embed");
   
   createButton(container11, "rgb(0,0,0)", "FNAF", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-1/index.html");
-  createButton(container11, "rgb(0,0,0)", "FNAF 2", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-2/index.html");
+  createButton(container11, "rgb(0,0,0)", "FNAF 2 (Remake)", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-2/index.html");
   createButton(container11, "rgb(0,0,0)", "FNAF 3", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-3/index.html");
   createButton(container11, "rgb(0,0,0)", "FNAF 4", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-4/index.html");
 
