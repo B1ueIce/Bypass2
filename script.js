@@ -1,4 +1,4 @@
-chage()
+
 function clear() {
   var body = document.body;
   var childNodes = body.childNodes;
@@ -227,3 +227,4 @@ function change() {
     document.body.appendChild(button);
   }
 }
+chage()
