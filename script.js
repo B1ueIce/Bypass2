@@ -1,4 +1,4 @@
-
+chage()
 function clear() {
   var body = document.body;
   var childNodes = body.childNodes;
