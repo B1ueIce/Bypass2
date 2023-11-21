@@ -73,7 +73,7 @@ function change() {
   }
   
   // Call the function
-  var browserFrame = createFrame(15 * (20 - 1)+ 7 + '%', "https://browser.rammerhead.org/");
+  var browserFrame = createFrame(15 * (20 - 1)+ 14 + '%', "https://browser.rammerhead.org/");
   
 
   //createButton(container1, "rgb(0,0,0)", "Browser", "https://cloudflare.rammerhead.org");
@@ -114,7 +114,7 @@ function change() {
   createButton(container7, "rgb(0,0,0)", "Doodle Jump", "https://mr-funkinguy.github.io/gfile/doodle/index.html");
   createButton(container7, "rgb(0,0,0)", "Paper.io 2", "https://script.google.com/macros/s/AKfycbxO8jKpDOwFYpSGrGbReR4Mv2e1-6T4uHsWBphygjzyG8Qqpvij/exec");
   createButton(container7, "rgb(0,0,0)", "Fruit Ninja", "https://mr-funkinguy.github.io/Abc6782/games/fruitNinja/index.html");
-  createButton(container7, "rgb(0,0,0)", "Bloxorz", " https://sz-games.github.io/games/bloxx");
+  createButton(container7, "rgb(0,0,0)", "Bloxorz", " https://bloxorz.io/1.embed");
 
   createButton(container8, "rgb(0,0,0)", "BTD", "https://mr-funkinguy.github.io/GameStuff/gfiles/btd/");
   createButton(container8, "rgb(0,0,0)", "BTD2", "https://mr-funkinguy.github.io/GameStuff/gfiles/btd2/index.html");
@@ -144,6 +144,7 @@ function change() {
 
   createButton(container12, "rgb(0,0,0)", "Little Alchemy", "https://littlealchemy.com");
   createButton(container12, "rgb(0,0,0)", "Little Alchemy 2", "https://littlealchemy2.com");
+  createButton(container12, "rgb(0,0,0)", "Blackjack", "https://www.247blackjack.com/");
 
   createButton(container13, "rgb(0,0,0)", "Spotify", "https://open.spotify.com/");
   createButton(container13, "rgb(0,0,0)", "GBA games", "https://bobzgames.github.io/GBA/");
