@@ -31,7 +31,7 @@ function change() {
   document.body.style.alignItems = "center";
   document.body.style.justifyContent = "center";
   document.body.style.overflow = "visible";
-  document.body.style.height = "500vh";
+  document.body.style.height = "330vh";
 
 
   document.body.style.backgroundColor = "#444444";
@@ -41,7 +41,7 @@ function change() {
 
   for (let i = 1; i <= 25; i++) {
     var containerName = 'container' + i;
-    window[containerName] = createContainer(10 + (7.5 * (i - 1)) + '%');
+    window[containerName] = createContainer(15 + (7.5 * (i - 1)) + '%');
    
   }
   
