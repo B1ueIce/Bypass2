@@ -41,7 +41,7 @@ function change() {
 
   for (let i = 1; i <= 25; i++) {
     var containerName = 'container' + i;
-    window[containerName] = createContainer(10 + (15 * (i - 1)) + '%');
+    window[containerName] = createContainer(10 + (7.5 * (i - 1)) + '%');
    
   }
   
@@ -90,8 +90,8 @@ function change() {
   }
   
   // Call the function
-  var browserFrame = createFrame(400 + "vh", "https://browser.rammerhead.org/");
-  var FirefoxFrame = createFrame2(500 + "vh", "https://replit.com/@kornineq/Unblocked-Browser?embed=true");
+  var browserFrame = createFrame(230 + "vh", "https://browser.rammerhead.org/");
+  var FirefoxFrame = createFrame2(330 + "vh", "https://replit.com/@kornineq/Unblocked-Browser?embed=true");
  
 
   //createObject(container1, "rgb(0,0,0)", "Browser", "https://cloudflare.rammerhead.org");
