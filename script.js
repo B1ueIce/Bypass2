@@ -11,6 +11,7 @@ function clear() {
 }
 
 function change() {
+
   document.title = "Blues Bypass";
   clear();
   var link = document.createElement('link');
