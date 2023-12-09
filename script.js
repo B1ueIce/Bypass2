@@ -91,7 +91,7 @@ function change() {
   
   // Call the function
   var browserFrame = createFrame(400 + "vh", "https://browser.rammerhead.org/");
-  var FirefoxFrame = createFrame2(500 + "vh", "https://replit.com/@kornineq/Unblocked-Browser?embed=true?outputonly=true");
+  var FirefoxFrame = createFrame2(500 + "vh", "https://replit.com/@kornineq/Unblocked-Browser?embed=true");
  
 
   //createObject(container1, "rgb(0,0,0)", "Browser", "https://cloudflare.rammerhead.org");
