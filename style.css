@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+
 body {
     overflow: hidden;
     display: flex;
@@ -8,10 +11,9 @@ body {
     background-color: #f1f1f1;
     margin: 0;
     
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Comfortaa', sans-serif;
   }
-
-
+  
   .container2 { margin: 50px auto 40px auto; width: 600px; text-align: center; }
 
   a { color: #4183c4; text-decoration: none; }
@@ -77,11 +79,11 @@ body {
   }
   
   #background {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 330vh;
     z-index: -999;
     background-image: url(BG.png);
     background-size: cover;
@@ -125,7 +127,7 @@ body {
   }
   .button {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: none;
     margin: 5px;
     cursor: pointer;
@@ -137,10 +139,13 @@ body {
     align-items: center;
     justify-content: center;
     /* Allow text to shrink to fit */
-    overflow: hidden;
     white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
+    /* Adjusting font size to make text fit */
 }
+
+
 
   .invis2 {
     position: fixed;
