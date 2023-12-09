@@ -31,7 +31,7 @@ function change() {
   document.body.style.alignItems = "center";
   document.body.style.justifyContent = "center";
   document.body.style.overflow = "visible";
-  document.body.style.height = "500vh";
+  document.body.style.height = "330vh";
 
 
   document.body.style.backgroundColor = "#444444";
