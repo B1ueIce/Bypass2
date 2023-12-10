@@ -152,9 +152,10 @@ function change() {
   createObject(container10, "rgba(0,0,0,0.5)", "AYKM Sanic Mode", "https://turbowarp.org/863584949/embed");
   createObject(container10, "rgba(0,0,0,0.5)", "AYKM Lots of Stuff Mode", "https://turbowarp.org/863553943/embed");
   createObject(container10, "rgba(0,0,0,0.5)", "AYKM Dark Mode", "https://turbowarp.org/863602237/embed");
-  
+
+  createObject(container11, "rgba(0,0,0,0)", "All remakes -->", " ");
   createObject(container11, "rgba(0,0,0,0.5)", "FNAF", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-1/index.html");
-  createObject(container11, "rgba(0,0,0,0.5)", "FNAF 2 (Remake)", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-2/index.html");
+  createObject(container11, "rgba(0,0,0,0.5)", "FNAF 2", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-2/index.html");
   createObject(container11, "rgba(0,0,0,0.5)", "FNAF 3", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-3/index.html");
   createObject(container11, "rgba(0,0,0,0.5)", "FNAF 4", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-4/index.html");
 
