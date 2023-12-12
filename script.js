@@ -20,6 +20,26 @@ function change() {
   link.href = 'favicon.ico';
 
 
+  var script = document.createElement('script');
+
+  script.src = 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3';
+
+  script.setAttribute('async', '');
+  script.setAttribute('defer', '');
+
+  function initializeCrate() {
+      new Crate({
+          server: '1184246690761424987', 
+          channel: '1184246692485288120' 
+      });
+  }
+
+
+script.onload = initializeCrate;
+
+
+document.body.appendChild(script);
+
   var favicons = document.getElementsByTagName('link');
   for (var i = 0; i < favicons.length; i++) {
     if (favicons[i].rel === 'icon') {
@@ -91,15 +111,14 @@ function change() {
   }
   
   // Call the function
-  var browserFrame = createFrame(230 + "vh", "https://browser.rammerhead.org/");
-  var FirefoxFrame = createFrame2(330 + "vh", "https://replit.com/@kornineq/Unblocked-Browser?embed=true");
+  var browserFrame = createFrame(250 + "vh", "https://browser.rammerhead.org/");
+  var FirefoxFrame = createFrame2(350 + "vh", "https://replit.com/@kornineq/Unblocked-Browser?embed=true");
  
 
   createObject(container1, "rgba(0,0,0,0)", "Scroll all the way down for 2 unblocked browsers", " ");
 
   createObject(container2, "rgba(0,0,0,0.5)", "Dino game", "https://chromedino.com/");
   createObject(container2, "rgba(0,0,0,0.5)", "Slime Simulator", "https://turbowarp.org/688840478/embed");
-  createObject(container2, "rgba(0,0,0,0.5)", "Clicker Heroes", "https://games-online.io/game/ClickerHeroes/");
   createObject(container2, "rgba(0,0,0,0.5)", "FNF", "https://static.playunblocked.com/2021/04/friday-night-funkin/");
   createObject(container2, "rgba(0,0,0,0.5)", "Chess", "https://toytheater.com/chess.php");
 
@@ -194,7 +213,7 @@ function change() {
 
   createObject(container20,"rgba(0,0,0,0.5)", "Super Smash Flash", "https://mr-funkinguy.github.io/GameStuff/gfiles/ssf/");
   createObject(container20,"rgba(0,0,0,0.5)", "Flappy Bird", "https://mr-funkinguy.github.io/83/flappy-bird/index.html");
-  createObject(container20,"rgba(0,0,0,0.5)", "UNO! but ripoff", "https://sz-games.github.io/games/game.html?game=https://mr-funkinguy.github.io/Abc6782/games/uno/index.html");
+  createObject(container20,"rgba(0,0,0,0.5)", "UNO! but ripoff", "https://mr-funkinguy.github.io/Abc6782/games/uno/index.html");
   createObject(container20,"rgba(0,0,0,0.5)", "Wordle", "https://sz-games.github.io/Games2/wordle");
 
   createObject(container21,"rgba(0,0,0,0.5)", "Stickman Hook", "https://sz-games.github.io/Games5/stickman-hook");
@@ -213,6 +232,17 @@ function change() {
   createObject(container22,"rgba(0,0,0,0.5)", "Money Rush", "https://sz-games.github.io/Games8/MONEYRUSH");
 
   createObject(container23, "rgba(0,0,0,0.5)", "Clockwork", "https://clockwork-os.vercel.app/os/");
+  createObject(container23, "rgba(0,0,0,0.5)", "Sodium", "https://sodium-5h8.pages.dev/welcome");
+  createObject(container23, "rgba(0,0,0,0.5)", "Zatoga", "https://zatoga.net/");
+  createObject(container23, "rgba(0,0,0,0.5)", "Utopia", "https://howtomath.org/main.html");
+
+  createObject(container24, "rgba(0,0,0,0.5)", "Cookie Clicker", "https://cookieclickerunblocked.github.io/games/cookie-clicker/index.html");
+  createObject(container24, "rgba(0,0,0,0.5)", "Antimatter Dimensions", "https://ivark.github.io/AntimatterDimensions/");
+  createObject(container24, "rgba(0,0,0,0.5)", "Clicker Heroes", "https://games-online.io/game/ClickerHeroes/");
+
+  createObject(container25, "rgba(0,0,0,0.5)", "Discord", "https://discord.com/app");
+  createObject(container25, "rgba(0,0,0,0.5)", "Neal.fun", "https://neal.fun");
+
   function createObject(parent, backgroundColor, text, url) {
     var button = document.createElement("button");
     button.classList.add("button");
