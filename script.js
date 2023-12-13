@@ -4,7 +4,7 @@ function clear() {
   var childNodes = body.childNodes;
   for (var i = childNodes.length - 1; i >= 0; i--) {
     var node = childNodes[i];
-    if (node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE" && node.name !== "BROWSER") {
+    if (node.classList == "container" || node.classList == "emulation-container" || node.id == "buttonback") {
       body.removeChild(node);
     }
   }
@@ -19,23 +19,23 @@ window.addEventListener("beforeunload", (event) => {
 });
 
 
+var script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3';
+
+script.setAttribute('async', '');
+script.setAttribute('defer', '');
+
+function initializeCrate() {
+    new Crate({
+        server: '1184246690761424987', 
+        channel: '1184246692485288120' 
+    });
+}
+
 function change() {
   clear();
 
 
-  var script = document.createElement('script');
-
-  script.src = 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3';
-
-  script.setAttribute('async', '');
-  script.setAttribute('defer', '');
-
-  function initializeCrate() {
-      new Crate({
-          server: '1184246690761424987', 
-          channel: '1184246692485288120' 
-      });
-  }
 
 
   script.onload = initializeCrate;
@@ -58,9 +58,9 @@ function change() {
   for (let i = 1; i <= 25; i++) {
     var containerName = 'container' + i;
     if (i == 1) {
-    window[containerName] = createContainer(15 + (7.5 * (i - 1)) + '%');
+    window[containerName] = createContainer(5 + (7.5 * (i - 1)) + '%');
     } else {
-    window[containerName] = createContainer(35 + (7.5 * (i - 1)) + '%');
+    window[containerName] = createContainer(25 + (7.5 * (i - 1)) + '%');
     }
   }
   
@@ -105,24 +105,26 @@ function change() {
     }
   }
   var scontainer = document.createElement("div");
-  scontainer.style.top = "34%";
+  scontainer.style.top = "25%";
   scontainer.classList.add("container")
   document.body.appendChild(scontainer);
 
   var searchInput = document.createElement("input");
+  searchInput.classList.add("container");
   searchInput.type = "text";
   searchInput.placeholder = "Search...";
   searchInput.style.zIndex = "1000";
   searchInput.style.width = "calc(100% - 20px)"; 
-  searchInput.style.height = "5%"; 
+  searchInput.style.height = "3%"; 
   searchInput.style.backgroundColor = "rgba(70,70,70,0.7)"; 
   searchInput.style.color = "white"; 
+  searchInput.style.textColor = "rgb(255,255,255)";
   searchInput.style.borderRadius = "20px"; 
   searchInput.style.border = "none";
   searchInput.style.padding = "10px"; 
   searchInput.style.position = "absolute";
   searchInput.style.fontSize = "20px"
-  searchInput.style.top = "10%";
+  searchInput.style.top = "15%";
   document.body.appendChild(searchInput)
   searchInput.addEventListener("input", filterObjects);
 
@@ -137,13 +139,15 @@ function change() {
   createObject(container2, "rgba(0,0,0,0.5)", "Slime Simulator", "https://turbowarp.org/688840478/embed");
   createObject(container2, "rgba(0,0,0,0.5)", "FNF", "https://static.playunblocked.com/2021/04/friday-night-funkin/");
   createObject(container2, "rgba(0,0,0,0.5)", "Chess", "https://toytheater.com/chess.php");
+  createObject(container2, "rgba(0,0,0,0.5)", "2d Minecraft", "https://turbowarp.org/10128407/embed");
+  createObject(container2, "rgba(0,0,0,0.5)", "Bored button", "https://www.boredbutton.com/random");
+  createObject(container2, "rgba(0,0,0,0.5)", "Checkers", "https://toytheater.com/checkers.php");
 
   createObject(container3, "rgba(0,0,0,0.5)", "Subway Surfers", "https://superteamxx.github.io/Subway-Surfers/");
   createObject(container3, "rgba(0,0,0,0.5)", "GD Scratch", "https://turbowarp.org/105500895/embed");
   createObject(container3, "rgba(0,0,0,0.5)", "Youtube bypass", "https://speedtesting.herokuapp.com/videodrive/?m=Video_To_Drive");
-  createObject(container3, "rgba(0,0,0,0.5)", "2d Minecraft", "https://turbowarp.org/10128407/embed");
   createObject(container3, "rgba(0,0,0,0.5)", "Mario", "https://jcw87.github.io/c2-smb1/");
-  createObject(container3, "rgba(0,0,0,0.5)", "Bored button", "https://www.boredbutton.com/random");
+
   
   createObject(container4, "rgba(0,0,0,0.5)", "Riddle School", "https://sz-games.github.io/games/ridd");
   createObject(container4, "rgba(0,0,0,0.5)", "Riddle School 2", "https://sz-games.github.io/games/ridd2");
@@ -156,8 +160,8 @@ function change() {
   createObject(container5, "rgba(0,0,0,0.5)", "Smash Karts", "https://games.crazygames.com/en_US/smash-karts/index.html");
   createObject(container5, "rgba(0,0,0,0.5)", "Agar.io", "https://emupedia.net/emupedia-game-agar.io/");
   createObject(container5, "rgba(0,0,0,0.5)", "Stack", "https://sz-games.github.io/games/stack");
-  createObject(container5, "rgba(0,0,0,0.5)", "Checkers", "https://toytheater.com/checkers.php");
-  
+  createObject(container5, "rgba(0,0,0,0.5)", "Bloxorz", " https://bloxorz.io/1.embed");
+
   createObject(container6, "rgba(0,0,0,0.5)", "Crossy Road", "https://sz-games.github.io/cr/");
   createObject(container6, "rgba(0,0,0,0.5)", "Fluids", "https://sz-games.github.io/storage3/1/");
   createObject(container6, "rgba(0,0,0,0.5)", "Temple Run 2", "https://mr-funkinguy.github.io/Abc6782/games/temple-run-2/index.html");
@@ -165,7 +169,7 @@ function change() {
   createObject(container7, "rgba(0,0,0,0.5)", "Doodle Jump", "https://mr-funkinguy.github.io/gfile/doodle/index.html");
   createObject(container7, "rgba(0,0,0,0.5)", "Paper.io 2", "https://paper-io.com/");
   createObject(container7, "rgba(0,0,0,0.5)", "Fruit Ninja", "https://mr-funkinguy.github.io/Abc6782/games/fruitNinja/index.html");
-  createObject(container7, "rgba(0,0,0,0.5)", "Bloxorz", " https://bloxorz.io/1.embed");
+  createObject(container7, "rgba(0,0,0,0.5)", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");;
 
   createObject(container8, "rgba(0,0,0,0.5)", "BTD", "https://mr-funkinguy.github.io/GameStuff/gfiles/btd/");
   createObject(container8, "rgba(0,0,0,0.5)", "BTD2", "https://mr-funkinguy.github.io/GameStuff/gfiles/btd2/index.html");
@@ -178,7 +182,8 @@ function change() {
   createObject(container9, "rgba(0,0,0,0.5)", "Stupid Clicker", "https://turbowarp.org/774324107/embed");
   createObject(container9, "rgba(0,0,0,0.5)", "Lil Oasis", "https://turbowarp.org/859599778/embed");
   createObject(container9, "rgba(0,0,0,0.5)", "Lil Oasis Expanded", "https://turbowarp.org/860600597/embed")
-  createObject(container9, "rgba(0,0,0,0.5)", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");;
+  createObject(container9, "rgba(0,0,0,0.5)", "Blackjack", "https://www.247blackjack.com/");
+
 
   createObject(container10,"rgba(0,0,0,0.5)", "Are you kidding me?", "https://turbowarp.org/836226987/embed");
   createObject(container10, "rgba(0,0,0,0.5)", "AYKM Hard Mode", "https://turbowarp.org/846897438/embed");
@@ -195,7 +200,6 @@ function change() {
 
   createObject(container12, "rgba(0,0,0,0.5)", "Little Alchemy", "https://littlealchemy.com");
   createObject(container12, "rgba(0,0,0,0.5)", "Little Alchemy 2", "https://littlealchemy2.com");
-  createObject(container12, "rgba(0,0,0,0.5)", "Blackjack", "https://www.247blackjack.com/");
 
   createObject(container13, "rgba(0,0,0,0.5)", "Spotify", "https://open.spotify.com/");
   createObject(container13, "rgba(0,0,0,0.5)", "GBA games", "https://bobzgames.github.io/GBA/");
