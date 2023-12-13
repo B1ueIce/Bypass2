@@ -10,14 +10,17 @@ function clear() {
   }
 }
 
-function change() {
 
-  document.title = "Blues Bypass";
+
+window.addEventListener("beforeunload", (event) => {
+ 
+  event.returnValue = true;
+  return "Are you sure you want to leave?";
+});
+
+
+function change() {
   clear();
-  var link = document.createElement('link');
-  link.rel = 'icon';
-  link.type = 'image/x-icon';
-  link.href = 'favicon.ico';
 
 
   var script = document.createElement('script');
@@ -35,18 +38,10 @@ function change() {
   }
 
 
-script.onload = initializeCrate;
+  script.onload = initializeCrate;
 
 
-document.body.appendChild(script);
-
-  var favicons = document.getElementsByTagName('link');
-  for (var i = 0; i < favicons.length; i++) {
-    if (favicons[i].rel === 'icon') {
-      document.head.removeChild(favicons[i]);
-      break;
-    }
-  }
+  document.body.appendChild(script);
 
   scrollTo(0, 0)
   document.body.style.alignItems = "center";
