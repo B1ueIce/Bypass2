@@ -248,7 +248,6 @@ function change() {
 
   createObject(container22,"rgba(0,0,0,0.5)", "SANS FIGHT", "https://sz-games.github.io/Games6/sansfight");
   createObject(container22,"rgba(0,0,0,0.5)", "Run 3", "https://sz-games.github.io/Games-2/run3/");
-  createObject(container22,"rgba(0,0,0,0.5)", "Money Rush", "https://sz-games.github.io/Games8/MONEYRUSH");
 
   createObject(container23, "rgba(0,0,0,0.5)", "Clockwork", "https://clockwork-os.vercel.app/os/");
   createObject(container23, "rgba(0,0,0,0.5)", "Sodium", "https://sodium-5h8.pages.dev/welcome");
@@ -261,6 +260,8 @@ function change() {
 
   createObject(container25, "rgba(0,0,0,0.5)", "Discord", "https://discord.com/app");
   createObject(container25, "rgba(0,0,0,0.5)", "Neal.fun", "https://neal.fun");
+  createObject(container25, "rgba(0,0,0,0.5)", "Idle Breakout", "https://html-classic.itch.zone/html/9150519/index.html");
+  createObject(container25,"rgba(0,0,0,0.5)", "Money Rush", "https://sz-games.github.io/Games8/MONEYRUSH");
 
   function filterObjects() {
     var searchText = searchInput.value.toLowerCase();
