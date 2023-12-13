@@ -62,8 +62,11 @@ document.body.appendChild(script);
 
   for (let i = 1; i <= 25; i++) {
     var containerName = 'container' + i;
+    if (i == 1) {
     window[containerName] = createContainer(15 + (7.5 * (i - 1)) + '%');
-   
+    } else {
+    window[containerName] = createContainer(35 + (7.5 * (i - 1)) + '%');
+    }
   }
   
   
@@ -78,7 +81,6 @@ document.body.appendChild(script);
   function createFrame(top, src) {
     var existingFrame = document.querySelector('iframe[name="BROWSER"]');
     
-    // Check if the iframe with name "BROWSER" exists
     if (!existingFrame) {
       var container = document.createElement("iframe");
       container.src = src;
@@ -94,8 +96,6 @@ document.body.appendChild(script);
   }
   function createFrame2(top, src) {
     var existingFrame = document.querySelector('iframe[name="BROWSER2"]');
-    
-    // Check if the iframe with name "BROWSER" exists
     if (!existingFrame) {
       var container = document.createElement("iframe");
       container.src = src;
@@ -109,10 +109,31 @@ document.body.appendChild(script);
       return existingFrame;
     }
   }
-  
-  // Call the function
-  var browserFrame = createFrame(250 + "vh", "https://browser.rammerhead.org/");
-  var FirefoxFrame = createFrame2(350 + "vh", "https://replit.com/@kornineq/Unblocked-Browser?embed=true");
+  var scontainer = document.createElement("div");
+  scontainer.style.top = "34%";
+  scontainer.classList.add("container")
+  document.body.appendChild(scontainer);
+
+  var searchInput = document.createElement("input");
+  searchInput.type = "text";
+  searchInput.placeholder = "Search...";
+  searchInput.style.zIndex = "1000";
+  searchInput.style.width = "calc(100% - 20px)"; 
+  searchInput.style.height = "5%"; 
+  searchInput.style.backgroundColor = "rgba(70,70,70,0.7)"; 
+  searchInput.style.color = "white"; 
+  searchInput.style.borderRadius = "20px"; 
+  searchInput.style.border = "none";
+  searchInput.style.padding = "10px"; 
+  searchInput.style.position = "absolute";
+  searchInput.style.fontSize = "20px"
+  searchInput.style.top = "10%";
+  document.body.appendChild(searchInput)
+  searchInput.addEventListener("input", filterObjects);
+
+
+  var browserFrame = createFrame(260 + "vh", "https://browser.rammerhead.org/");
+  var FirefoxFrame = createFrame2(360 + "vh", "https://replit.com/@kornineq/Unblocked-Browser?embed=true");
  
 
   createObject(container1, "rgba(0,0,0,0)", "Scroll all the way down for 2 unblocked browsers", " ");
@@ -172,7 +193,6 @@ document.body.appendChild(script);
   createObject(container10, "rgba(0,0,0,0.5)", "AYKM Lots of Stuff Mode", "https://turbowarp.org/863553943/embed");
   createObject(container10, "rgba(0,0,0,0.5)", "AYKM Dark Mode", "https://turbowarp.org/863602237/embed");
 
-  createObject(container11, "rgba(0,0,0,0)", "All remakes -->", " ");
   createObject(container11, "rgba(0,0,0,0.5)", "FNAF", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-1/index.html");
   createObject(container11, "rgba(0,0,0,0.5)", "FNAF 2", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-2/index.html");
   createObject(container11, "rgba(0,0,0,0.5)", "FNAF 3", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-3/index.html");
@@ -243,9 +263,27 @@ document.body.appendChild(script);
   createObject(container25, "rgba(0,0,0,0.5)", "Discord", "https://discord.com/app");
   createObject(container25, "rgba(0,0,0,0.5)", "Neal.fun", "https://neal.fun");
 
+  function filterObjects() {
+    var searchText = searchInput.value.toLowerCase();
+    var buttons = document.querySelectorAll(".button");
+
+    buttons.forEach(function (button) {
+     
+      var buttonText = button.getAttribute("data-text"); 
+      if (buttonText.includes(searchText) && searchText !== "" && button.customparent != container1) {
+
+        scontainer.appendChild(button)
+      } else {
+    
+        button.customparent.appendChild(button)
+        
+      }
+    });
+  }
   function createObject(parent, backgroundColor, text, url) {
     var button = document.createElement("button");
     button.classList.add("button");
+    button.customparent = parent;
     button.style.backgroundColor = backgroundColor;
     button.textContent = text;
     button.onclick = function () {
@@ -255,7 +293,9 @@ document.body.appendChild(script);
       }
     
     };
-  
+
+    button.setAttribute("data-text", text.toLowerCase()); // Store lowercase text for case-insensitive search
+
     var textColor = "#ffffff"
     button.style.color = textColor;
   
