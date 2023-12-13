@@ -4,7 +4,7 @@ function clear() {
   var childNodes = body.childNodes;
   for (var i = childNodes.length - 1; i >= 0; i--) {
     var node = childNodes[i];
-    if (node.classList == "container" || node.classList == "emulation-container" || node.id == "buttonback") {
+    if (node.classList == "container" || node.classList == "emulation-container" || node.id == "buttonback" || node.id == "background") {
       body.removeChild(node);
     }
   }
