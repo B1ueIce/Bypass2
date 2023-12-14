@@ -264,7 +264,7 @@ function change() {
   createObject(container25, "rgba(0,0,0,0.5)", "Neal.fun", "https://neal.fun");
   createObject(container25, "rgba(0,0,0,0.5)", "Idle Breakout", "https://html-classic.itch.zone/html/9150519/index.html");
   createObject(container25,"rgba(0,0,0,0.5)", "Money Rush", "https://sz-games.github.io/Games8/MONEYRUSH");
-
+  createObject(container25,"rgba(0,0,0,0.5)", "Paint", "https://jspaint.app/");
   function filterObjects() {
     var searchText = searchInput.value.toLowerCase();
     var buttons = document.querySelectorAll(".button");
