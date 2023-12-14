@@ -200,6 +200,7 @@ function change() {
 
   createObject(container12, "rgba(0,0,0,0.5)", "Little Alchemy", "https://littlealchemy.com");
   createObject(container12, "rgba(0,0,0,0.5)", "Little Alchemy 2", "https://littlealchemy2.com");
+  createObject(container12, "rgba(0,0,0,0.5)", "Construct" , "https://www.construct.net/en/free-online-games");
 
   createObject(container13, "rgba(0,0,0,0.5)", "Spotify", "https://open.spotify.com/");
   createObject(container13, "rgba(0,0,0,0.5)", "GBA games", "https://bobzgames.github.io/GBA/");
@@ -248,7 +249,7 @@ function change() {
 
   createObject(container22,"rgba(0,0,0,0.5)", "SANS FIGHT", "https://sz-games.github.io/Games6/sansfight");
   createObject(container22,"rgba(0,0,0,0.5)", "Run 3", "https://sz-games.github.io/Games-2/run3/");
-  createObject(container22,"rgba(0,0,0,0.5)", "There is no game", "https://zatoga.net/games/there-is-no-game/index.html");
+  createObject(container22,"rgba(0,0,0,0.5)", "There is no game", "https://games.construct.net/174/latest");
 
   createObject(container23, "rgba(0,0,0,0.5)", "Clockwork", "https://clockwork-os.vercel.app/os/");
   createObject(container23, "rgba(0,0,0,0.5)", "Sodium", "https://sodium-5h8.pages.dev/welcome");
