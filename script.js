@@ -248,6 +248,7 @@ function change() {
 
   createObject(container22,"rgba(0,0,0,0.5)", "SANS FIGHT", "https://sz-games.github.io/Games6/sansfight");
   createObject(container22,"rgba(0,0,0,0.5)", "Run 3", "https://sz-games.github.io/Games-2/run3/");
+  createObject(container22,"rgba(0,0,0,0.5)", "There is no game", "https://zatoga.net/games/there-is-no-game/index.html");
 
   createObject(container23, "rgba(0,0,0,0.5)", "Clockwork", "https://clockwork-os.vercel.app/os/");
   createObject(container23, "rgba(0,0,0,0.5)", "Sodium", "https://sodium-5h8.pages.dev/welcome");
