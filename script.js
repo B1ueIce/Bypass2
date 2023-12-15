@@ -28,8 +28,7 @@ script.setAttribute('defer', '');
 function initializeCrate() {
     new Crate({
         server: '1184246690761424987', 
-        channel: '1184246692485288120',
-        location: [875, 'right'],
+        channel: '1184246692485288120'
 
     });
 }
