@@ -134,7 +134,7 @@ function change() {
  
 
   createObject(container1, "rgba(0,0,0,0)", "Scroll all the way down for 2 unblocked browsers", " ");
-  createObject(container1, "rgba(0,0,0,0)", "Potential 3.0 version coming out after break!", " ");
+  createObject(container1, "rgba(0,0,0,0)", "There might be 3.0 version coming out after break!", " ");
 
   createObject(container2, "rgba(0,0,0,0.5)", "Dino game", "https://chromedino.com/");
   createObject(container2, "rgba(0,0,0,0.5)", "Slime Simulator", "https://turbowarp.org/688840478/embed");
