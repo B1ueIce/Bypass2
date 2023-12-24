@@ -134,15 +134,10 @@ function change() {
  
 
   createObject(container1, "rgba(0,0,0,0)", "Scroll all the way down for 2 unblocked browsers", " ");
-  createObject(container1, "rgba(0,0,0,0)", "There might be 3.0 version coming out after break!", " ");
+  createObject(container1, "rgba(0,0,0,0)", "VERSION 3 OUT b1ueice.github.io/BypassWebsite3", " ");
 
-  createObject(container2, "rgba(0,0,0,0.5)", "Dino game", "https://chromedino.com/");
-  createObject(container2, "rgba(0,0,0,0.5)", "Slime Simulator", "https://turbowarp.org/688840478/embed");
-  createObject(container2, "rgba(0,0,0,0.5)", "FNF", "https://static.playunblocked.com/2021/04/friday-night-funkin/");
-  createObject(container2, "rgba(0,0,0,0.5)", "Chess", "https://toytheater.com/chess.php");
-  createObject(container2, "rgba(0,0,0,0.5)", "2d Minecraft", "https://turbowarp.org/10128407/embed");
-  createObject(container2, "rgba(0,0,0,0.5)", "Bored button", "https://www.boredbutton.com/random");
-  createObject(container2, "rgba(0,0,0,0.5)", "Checkers", "https://toytheater.com/checkers.php");
+  createObject(container2,  "rgb(0,255,0)", "Version 3 Installer", "https://b1ueice.github.io/BypassWebsite3/")
+  createObject(container2,  "rgb(0,255,0)", "Version 3 Direct Access (Will be removed)", "https://b1ueice.github.io/BypassWebsite3/main")
 
   createObject(container3, "rgba(0,0,0,0.5)", "Subway Surfers", "https://superteamxx.github.io/Subway-Surfers/");
   createObject(container3, "rgba(0,0,0,0.5)", "GD Scratch", "https://turbowarp.org/105500895/embed");
@@ -266,6 +261,14 @@ function change() {
   createObject(container25, "rgba(0,0,0,0.5)", "Idle Breakout", "https://html-classic.itch.zone/html/9150519/index.html");
   createObject(container25,"rgba(0,0,0,0.5)", "Money Rush", "https://sz-games.github.io/Games8/MONEYRUSH");
   createObject(container25,"rgba(0,0,0,0.5)", "Paint", "https://jspaint.app/");
+
+  createObject(container26, "rgba(0,0,0,0.5)", "Dino game", "https://chromedino.com/");
+  createObject(container26, "rgba(0,0,0,0.5)", "Slime Simulator", "https://turbowarp.org/688840478/embed");
+  createObject(container26, "rgba(0,0,0,0.5)", "FNF", "https://static.playunblocked.com/2021/04/friday-night-funkin/");
+  createObject(container26, "rgba(0,0,0,0.5)", "Chess", "https://toytheater.com/chess.php");
+  createObject(container26, "rgba(0,0,0,0.5)", "2d Minecraft", "https://turbowarp.org/10128407/embed");
+  createObject(container26, "rgba(0,0,0,0.5)", "Bored button", "https://www.boredbutton.com/random");
+  createObject(container26, "rgba(0,0,0,0.5)", "Checkers", "https://toytheater.com/checkers.php");
   function filterObjects() {
     var searchText = searchInput.value.toLowerCase();
     var buttons = document.querySelectorAll(".button");
