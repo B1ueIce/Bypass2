@@ -133,8 +133,7 @@ function change() {
   var FirefoxFrame = createFrame2(360 + "vh", "https://replit.com/@kornineq/Unblocked-Browser?embed=true");
  
 
-  createObject(container1, "rgba(0,0,0,0)", "Scroll all the way down for 2 unblocked browsers", " ");
-  createObject(container1, "rgba(0,0,0,0)", "VERSION 3 OUT b1ueice.github.io/BypassWebsite3", " ");
+  createObject(container1, "rgba(0,0,0,0)", "THIS VERSION IS NO LONGER MAINTAINED ANYTHING BROKEN WILL NOT BE FIXED, !INSTALL V3!", " ");
 
   createObject(container2,  "rgb(0,255,0)", "Version 3 Installer", "https://b1ueice.github.io/BypassWebsite3/")
   createObject(container2,  "rgb(0,255,0)", "Version 3 Direct Access (Will be removed)", "https://b1ueice.github.io/BypassWebsite3/main")
